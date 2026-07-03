@@ -1,4 +1,4 @@
-﻿import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 const contact = {
   phone: '',
@@ -149,11 +149,11 @@ function Home({ t, setPage }) {
   return <main>
     <section className="hero-section wide-card">
       <div><p className="pill">{t.title}</p><h1>{t.hero}</h1><p>{t.intro}</p><div className="hero-actions"><button className="button-link" onClick={() => setPage('contact')}>{t.ctaPrimary}</button><button className="button-link secondary" onClick={() => setPage('meditation')}>{t.ctaSecondary}</button></div></div>
-      <figure className="profile-card large-profile"><img src="/counseling/simona-photo-flower.png" alt={t.name} /><figcaption><strong>{t.name}</strong><span>{t.role}</span></figcaption></figure>
+      <figure className="profile-card large-profile"><img src="./counseling/simona-photo-flower.png" alt={t.name} /><figcaption><strong>{t.name}</strong><span>{t.role}</span></figcaption></figure>
     </section>
     <section className="stat-row">{t.stats.map(item => <article key={item}>{item}</article>)}</section>
     <IntroVideo t={t} links={{ introReel: contact.introReel }} />
-    <section className="split-section"><article className="panel"><h2>{t.aboutTitle}</h2><p>{t.about}</p></article><img src="/counseling/hands-session.png" alt={t.aboutTitle} /></section>
+    <section className="split-section"><article className="panel"><h2>{t.aboutTitle}</h2><p>{t.about}</p></article><img src="./counseling/hands-session.png" alt={t.aboutTitle} /></section>
   </main>
 }
 
@@ -162,11 +162,11 @@ function IntroVideo({ t, links }) {
 }
 
 function About({ t }) {
-  return <main className="page-stack"><section className="split-section about-layout"><figure className="profile-card"><img src="/counseling/simona-photo-flower.png" alt={t.name} /><figcaption><strong>{t.name}</strong><span>{t.role}</span></figcaption></figure><article className="panel"><p className="pill">{t.nav.about}</p><h1>{t.aboutTitle}</h1><p>{t.about}</p><h2>{t.approachTitle}</h2><p>{t.approach}</p></article></section></main>
+  return <main className="page-stack"><section className="split-section about-layout"><figure className="profile-card"><img src="./counseling/simona-photo-flower.png" alt={t.name} /><figcaption><strong>{t.name}</strong><span>{t.role}</span></figcaption></figure><article className="panel"><p className="pill">{t.nav.about}</p><h1>{t.aboutTitle}</h1><p>{t.about}</p><h2>{t.approachTitle}</h2><p>{t.approach}</p></article></section></main>
 }
 
 function PathPage({ t }) {
-  return <main className="page-stack"><section className="panel intro-panel"><p className="pill">{t.nav.path}</p><h1>{t.pathTitle}</h1><ul className="large-list">{t.points.map(point => <li key={point}>{point}</li>)}</ul></section><section className="service-grid">{t.services.map(([title, body]) => <article className="panel service-card" key={title}><h2>{title}</h2><p>{body}</p></article>)}</section><section className="split-section"><img src="/counseling/hands-session.png" alt={t.workTitle} /><article className="panel"><h2>{t.workTitle}</h2><p>{t.work}</p></article></section></main>
+  return <main className="page-stack"><section className="panel intro-panel"><p className="pill">{t.nav.path}</p><h1>{t.pathTitle}</h1><ul className="large-list">{t.points.map(point => <li key={point}>{point}</li>)}</ul></section><section className="service-grid">{t.services.map(([title, body]) => <article className="panel service-card" key={title}><h2>{title}</h2><p>{body}</p></article>)}</section><section className="split-section"><img src="./counseling/hands-session.png" alt={t.workTitle} /><article className="panel"><h2>{t.workTitle}</h2><p>{t.work}</p></article></section></main>
 }
 
 function Reflections({ t, links }) {
@@ -174,7 +174,7 @@ function Reflections({ t, links }) {
     <section className="instagram-band"><div><h2>Instagram</h2><p>{t.instagramCta}</p></div><a href={links.instagram} className="button-link instagram" target="_blank" rel="noreferrer">{t.instagram}</a></section></main>
 }
 function Meditation({ t }) {
-  return <main className="meditation-focus"><img src="/counseling/nature.png" alt={t.meditationTitle} /><section className="audio-card"><p className="pill">{t.title}</p><h1>{t.meditationTitle}</h1><p>{t.meditationText}</p><audio controls preload="metadata"><source src="/audio/meditation.mp3" type="audio/mpeg" /></audio><small>{t.audioHint}</small></section></main>
+  return <main className="meditation-focus"><img src="./counseling/nature.png" alt={t.meditationTitle} /><section className="audio-card"><p className="pill">{t.title}</p><h1>{t.meditationTitle}</h1><p>{t.meditationText}</p><audio controls preload="metadata"><source src="./audio/meditation.mp3" type="audio/mpeg" /></audio><small>{t.audioHint}</small></section></main>
 }
 
 function Contact({ t, links }) {
