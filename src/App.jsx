@@ -32,7 +32,7 @@ const content = {
     ],
     workTitle: 'Come lavoro',
     work: 'Il percorso si svolge attraverso incontri individuali online, in uno spazio dedicato e riservato. Ogni incontro dura un ora e trenta minuti. L approccio si fonda su ascolto, presenza e rispetto dei tuoi tempi.',
-    meditationTitle: 'Meditazione guidata - Ritorna al centro',
+    meditationTitle: 'Meditazione guidata',
     meditationText: 'Apri uno spazio di ascolto con un paesaggio naturale e la meditazione guidata.',
     audioHint: 'Scegli la meditazione nella tua lingua.',
     listenItalian: 'Ascolta la meditazione in italiano',
@@ -74,7 +74,7 @@ const content = {
     ],
     workTitle: 'Cum lucrez',
     work: 'Parcursul are loc prin intalniri individuale online, intr-un spatiu dedicat si confidential. Fiecare intalnire dureaza o ora si treizeci de minute. Abordarea se bazeaza pe ascultare, prezenta si respect pentru ritmul tau.',
-    meditationTitle: 'Meditatie ghidata - Intoarcere la centru',
+    meditationTitle: 'Meditatie ghidata',
     meditationText: 'Deschide un spatiu de ascultare cu o imagine naturala si meditatia ghidata.',
     audioHint: 'Alege meditatia in limba ta.',
     listenItalian: 'Asculta meditatia in italiana',
@@ -190,5 +190,6 @@ function Contact({ t, links }) {
 }
 
 export default App
+
 
 
