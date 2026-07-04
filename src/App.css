@@ -154,3 +154,23 @@ p, li, small { color: var(--muted); line-height: 1.78; font-size: 1.04rem; }
     height: 460px;
   }
 }
+
+.audio-choice {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.audio-choice p {
+  margin: 8px 0 0;
+  color: #fff8e8;
+  font-weight: 900;
+}
+
+.audio-choice audio {
+  width: 100%;
+}
+
+.button-link.tiktok {
+  background: linear-gradient(135deg, #111111, #00f2ea 45%, #ff0050);
+}

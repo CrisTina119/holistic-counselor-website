@@ -1,10 +1,11 @@
-import { useEffect, useMemo, useState } from 'react'
+﻿import { useEffect, useMemo, useState } from 'react'
 
 const contact = {
-  phone: '',
-  email: '',
+  phone: '393383054149',
+  email: 'simona.benessereolistico@gmail.com',
   instagram: 'https://www.instagram.com/simonastrungariu',
   introReel: 'https://www.instagram.com/reel/DZXW9QAgVWb/',
+  tiktok: 'https://www.tiktok.com/@counselor_olistico',
 }
 
 const content = {
@@ -33,7 +34,10 @@ const content = {
     work: 'Il percorso si svolge attraverso incontri individuali online, in uno spazio dedicato e riservato. Ogni incontro dura un ora e trenta minuti. L approccio si fonda su ascolto, presenza e rispetto dei tuoi tempi.',
     meditationTitle: 'Meditazione guidata - Ritorna al centro',
     meditationText: 'Apri uno spazio di ascolto con un paesaggio naturale e la meditazione guidata.',
-    audioHint: 'Aggiungi il file audio in public/audio/meditation.mp3.',
+    audioHint: 'Scegli la meditazione nella tua lingua.',
+    listenItalian: 'Ascolta la meditazione in italiano',
+    listenRomanian: 'Ascolta la meditazione in rumeno',
+    tiktok: 'Seguimi su TikTok',
     noteTitle: 'Nota importante',
     note: 'Il counseling olistico e un percorso di ascolto, crescita personale e sostegno al benessere emotivo. Non sostituisce psicoterapia, supporto medico o trattamento sanitario.',
     reflectionsTitle: 'Riflessioni e ispirazione',
@@ -72,7 +76,10 @@ const content = {
     work: 'Parcursul are loc prin intalniri individuale online, intr-un spatiu dedicat si confidential. Fiecare intalnire dureaza o ora si treizeci de minute. Abordarea se bazeaza pe ascultare, prezenta si respect pentru ritmul tau.',
     meditationTitle: 'Meditatie ghidata - Intoarcere la centru',
     meditationText: 'Deschide un spatiu de ascultare cu o imagine naturala si meditatia ghidata.',
-    audioHint: 'Adauga fisierul audio in public/audio/meditation.mp3.',
+    audioHint: 'Alege meditatia in limba ta.',
+    listenItalian: 'Asculta meditatia in italiana',
+    listenRomanian: 'Asculta meditatia in romana',
+    tiktok: 'Urmareste-ma pe TikTok',
     noteTitle: 'Nota importanta',
     note: 'Consilierea holistica este un parcurs de ascultare, crestere personala si sustinere a starii de bine emotionale. Nu inlocuieste psihoterapia, sprijinul medical sau tratamentul sanitar.',
     reflectionsTitle: 'Reflectii si inspiratie',
@@ -106,6 +113,7 @@ function App() {
     email: contact.email ? `mailto:${contact.email}` : '#',
     instagram: contact.instagram || '#',
     introReel: contact.introReel || '#',
+    tiktok: contact.tiktok || '#',
   }), [])
 
   return (
@@ -174,12 +182,13 @@ function Reflections({ t, links }) {
     <section className="instagram-band"><div><h2>Instagram</h2><p>{t.instagramCta}</p></div><a href={links.instagram} className="button-link instagram" target="_blank" rel="noreferrer">{t.instagram}</a></section></main>
 }
 function Meditation({ t }) {
-  return <main className="meditation-focus"><img src="./counseling/nature.png" alt={t.meditationTitle} /><section className="audio-card"><p className="pill">{t.title}</p><h1>{t.meditationTitle}</h1><p>{t.meditationText}</p><audio controls preload="metadata"><source src="./audio/meditation.mp3" type="audio/mpeg" /></audio><small>{t.audioHint}</small></section></main>
+  return <main className="meditation-focus"><img src="./counseling/nature.png" alt={t.meditationTitle} /><section className="audio-card"><p className="pill">{t.title}</p><h1>{t.meditationTitle}</h1><p>{t.meditationText}</p><div className="audio-choice"><p>{t.listenItalian}</p><audio controls preload="metadata"><source src="./audio/meditation-it.aac" type="audio/aac" /></audio><p>{t.listenRomanian}</p><audio controls preload="metadata"><source src="./audio/meditation-ro.aac" type="audio/aac" /></audio></div><small>{t.audioHint}</small></section></main>
 }
 
 function Contact({ t, links }) {
-  return <main className="page-stack"><section className="cta-section wide-card"><article><p className="pill">{t.nav.contact}</p><h1>{t.contactTitle}</h1><p>{t.contactText}</p><div className="cta-actions"><a href={links.whatsapp} className="button-link">{t.whatsapp}</a><a href={links.email} className="button-link secondary">{t.email}</a><a href={links.instagram} className="button-link instagram">{t.instagram}</a></div></article><article className="panel"><h2>{t.noteTitle}</h2><p>{t.note}</p></article></section></main>
+  return <main className="page-stack"><section className="cta-section wide-card"><article><p className="pill">{t.nav.contact}</p><h1>{t.contactTitle}</h1><p>{t.contactText}</p><div className="cta-actions"><a href={links.whatsapp} className="button-link">{t.whatsapp}</a><a href={links.email} className="button-link secondary">{t.email}</a><a href={links.instagram} className="button-link instagram" target="_blank" rel="noreferrer">{t.instagram}</a><a href={links.tiktok} className="button-link tiktok" target="_blank" rel="noreferrer">{t.tiktok}</a></div></article><article className="panel"><h2>{t.noteTitle}</h2><p>{t.note}</p></article></section></main>
 }
 
 export default App
+
 
